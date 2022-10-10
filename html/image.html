@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body{
+            background-image: url('img_3.jfif');
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        p {
+          background-image: url('img_2.jfif');
+          color:aquamarine;
+        }
+        </style>
+    <body>
+        <h1 style="color:antiquewhite">The picture Element</h2>
+
+    <picture>
+        <source media="(min-width: 850px)" srcset="img_1.jfif">
+        <source media="(min-width: 65px)" srcset="img_2.jfif">
+        <img src="img_3.jfif" style="width:auto;">
+    </picture>
+        <h2 style="color:antiquewhite">FLOAT IMAGE</h1>
+        <p><img src="img_4.jpg" style="float:left;width:42px;height:42px;">image will float to left</p>
+        <h3 style="color:antiquewhite">IMAGE MAP</h2>
+        <p>click on the jacket to go to new page</p>
+        <img src="img_4.jpg" usemap="#coolmap" width="1000" height="2000">
+
+    <map name="coolmap">
+    <area shape="poly" coords="313,1400,137,1342,227,586,305,359,426,351,372,1000" href="start.html" onclick="myfunction()">
+    <area shape="poly" coords="585,380,625,1468,797,1474,786,1334,815,1312,869,1303,887,1180,858,995,774,579" href="start.html" onclick="myfunction()">
+    </map>
+    <script>
+        function myfunction(){
+        alert("you clicked jacket");
+        }
+
+    </script>
+
+    </body>
+</html>

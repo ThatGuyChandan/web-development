@@ -1,0 +1,109 @@
+#background{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/img6.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+#navbar{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+#navbar .logo{
+    width: 60px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+#user{
+    display: flex;
+    align-items: center;
+}
+#user img{
+    width: 60px;
+    margin-left: 50px;
+    cursor: pointer;
+    border-radius: 33px;
+}
+button{
+    padding: 8px 25px;
+    background: transparent;
+    outline: none;
+    border: 4px solid;
+    color: azure;
+    font-size: 15px;
+    cursor: pointer;
+}
+.container{
+    width: 50%;
+    height: 100vh;
+    background:rgba(86,86,86,0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info{
+    width:500px;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info h1{
+    font-size: 55px;
+}
+.info p{
+    font-size: 15px;
+    color: beige;
+    line-height: 10px;
+}
+.info input{
+    width: 50%;
+    margin: 8px 10px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 22px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+
+}
+::placeholder{
+    color: whitesmoke;
+}
+.slider{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+
+}
+#prev, #next{
+width: 35px;
+cursor: pointer;
+}
+.preview{
+    display: flex;
+    align-items: center;
+    margin: 0 60px;
+}
+.preview img{
+    width: 80px;
+    margin: 0 10px;
+    opacity: 0.6;
+}
+.preview .active{
+    display: block;
+   width: 100px;
+   border: 4px solid white;
+   opacity: 1;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+       <title>Background changing website</title>
+       <link rel="stylesheet" href="project3.css">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="background">
+            <div id="navbar">
+                <img src="images/img_5.png" class="logo">
+                <div id="user">
+                    <button type="button">Explore</button>
+                    <img src="images/img2.jpg">
+                </div>
+            
+            </div>
+            <div class="container">
+                <div class="info">
+                    <h1>Discover</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, tenetur possimus. Neque ab a ipsum. Aut reiciendis dignissimos, minus adipisci porro voluptates. Sunt sequi voluptas libero? Nobis eos maiores laboriosam!</p>
+                     <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="slider">
+                <img src="images/arrow_prev.png" id="prev">
+                <div class="preview">
+                    <img src="images/img6.jpg" class="active thumbnail">  
+                    <img src="images/img7.jpg" class="thumbnail">  
+                    <img src="images/img8.jpg" class="thumbnail">  
+                    <img src="images/img5.jpg" class="thumbnail">  
+                </div>
+                <img src="images/arrow_next.png" id="next">
+
+            </div>
+        </div>
+    <script>
+        var prev=document.getElementById("prev");
+        var next=document.getElementById("next");
+        var thumbnail=document.getElementsByClassName("thumbnail");
+        var background=document.getElementsById("background");
+
+        var backgroundImg=new Array(
+            "images/img6.jpg",
+            "images/img7.jpg",
+            "images/img8.jpg",
+            "images/img5.jpg",
+        );
+        let i=0;
+        next.onclick=function(){
+            if(i<backgroundImg.length()){
+            background.style.backgroundImage='url("'+backgroundImg[i+1]+'")';
+            thumbnail[i+1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i++;
+            }
+        }
+            prev.onclick=function(){
+            if(i>0){
+            background.style.backgroundImage='url("'+backgroundImg[i-1]+'")';
+            thumbnail[i-1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i--;
+            }
+        }
+
+
+    </script>
+
+    </body>
+</html>

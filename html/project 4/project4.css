@@ -1,0 +1,96 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(4, 1, 1, 0.3),transparent),url(image/img7.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px 0;
+
+}
+.logo{
+    width: 72px;
+    cursor: pointer;
+}
+nav ul{
+    flex:1;
+    text-align: right;
+    padding-right:20%;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 12px 15px;
+    
+}
+nav ul li a{
+    color: azure;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: green;
+}
+.txt-box{
+    color: azure;
+    position: absolute;
+    bottom: 10%;
+}
+.txt-box h3{
+    font-size: 52px;
+    line-height: 50px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(image/img6.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+.txt-box h1{
+    font-size: 82px;
+    line-height: 50px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(image/img6.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position:2000px 0 ;
+    }
+    
+}
+.txt-box h2{
+    font-size: 52px; 
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(image/img6.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+.txt-box.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.txt-box a{
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 10px 20px;
+margin-right: 20px;
+border: 2px solid white;
+}

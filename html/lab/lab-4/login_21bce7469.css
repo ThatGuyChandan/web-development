@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+}
+#x1{
+    overflow: hidden;
+    background-color: #2980B9;
+    display: flex;
+}
+
+img{
+    height: 50px;
+}
+#x{
+    margin-left: 75%;
+    font-size: 20px;
+    color: aliceblue;
+}
+#box{
+    border:1px solid #5eb5c3;
+    border-top: 3px solid #2980B9 ;
+    margin: 12% 35%;
+    padding: 20px;
+    border-radius: 4px;
+}
+#password,#Username{
+    width: 55vh;
+    height: 5vh;
+    background-color: #e6f4f7;
+    border-radius: 5px;
+}
+#x3{
+    display: flex;
+}
+#btn{
+    border-radius: 5px;
+    margin-left: 40%;
+    color: aliceblue;
+    background-color:  #2980B9;
+    cursor: pointer;
+}
+.lin{
+    text-decoration: none;
+  }
+  .lin:hover{
+    color: green;
+  }
+
+  #textBox{
+    width: 55%;
+  }
+  #captcha{
+    margin-left: 20%;
+  }
+  #xyz,#appear,#user,#pass{
+    color: red;
+    display: none;
+  }
+  

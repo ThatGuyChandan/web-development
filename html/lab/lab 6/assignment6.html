@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="21bce7469.css">
+    </head>
+    <body>
+        <div id="x1">The brochure will be downloaded after submitting the following form</div>
+        <div id="x2">
+            <form >
+                <input type="text" id="name" placeholder="Name" ><br><br>
+                <input type="email" id="email" placeholder="E-mail Address"><br><br>
+                <input type="text" id="phone" placeholder="Phone Number"><br><br>
+                <select name="program" id="program" >
+                    <option >Program intrested in</option>
+                    <option value="btech">btech</option>
+                    <option value="mtech">mtech</option>
+                    <option value="mbbs">mbbs</option>
+                    <option value="bba">bba</option>
+                    <option value="ma">ma</option>
+                  </select><br><br>
+               
+                <select name="state" id="state" >
+                    <option >State and Union Territiories</option>
+                    <option value="AP">AP</option>
+                    <option value="HP">HP</option>
+                    <option value="MP">MP</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Haryana">Haryana</option>
+                  </select><br><br>
+                <input type="text" id="city" placeholder="City"><br><br>
+                <button id="btn" >submit</button>
+            </form>
+     
+        </div>
+        <script>
+            function validateForm() {
+              var name = document.getElementById("name").value;
+              var email = document.getElementById("email").value;
+              var phone = document.getElementById("phone").value;
+              var city = document.getElementById("city").value;
+          
+              if (name == "" || email == "" || phone == "" || city == "") {
+                alert("All fields must be filled out");
+                return false;
+              }
+          
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  if (this.responseText == "success") {
+                    window.location.href = "thankyou.html";
+                  } else {
+                    alert(this.responseText);
+                  }
+                }
+              };
+              xmlhttp.open("POST", "21bce7469.php", true);
+              xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+              xmlhttp.send("name=" + name + "&email=" + email + "&phone=" + phone + "&city=" + city);
+          
+              return false;
+            }
+          </script>
+          
+    </body>
+</html>

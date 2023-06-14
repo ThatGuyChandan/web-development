@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<form>
+		<label for="first-name">First Name:</label>
+		<input type="text" id="first-name" required><br><br>
+
+		<label for="last-name">Last Name:</label>
+		<input type="text" id="last-name" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" required><br><br>
+
+		<label for="confirm-password">Confirm Password:</label>
+		<input type="password" id="confirm-password" required><br><br>
+
+		<button type="submit" onclick="validateForm()">Submit</button>
+	</form>
+
+	<script>
+		function validateForm() {
+			var firstName = document.getElementById("first-name").value;
+			var lastName = document.getElementById("last-name").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("confirm-password").value;
+
+			if (password == firstName) {
+				alert("Password must not be the same as the first name.");
+				return false;
+			}
+
+			if (email.slice(-1) != "n") {
+				alert("The last character of the email must be 'n'.");
+				return false;
+			}
+
+			if (password != confirmPassword) {
+				alert("Password and confirm password must be the same.");
+				return false;
+			}
+
+			if (firstName == lastName) {
+				alert("First name and last name must not be the same.");
+				return false;
+			}
+
+			alert("Form submitted successfully!");
+			return true;
+		}
+	</script>
+</body>
+</html>

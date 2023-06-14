@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #x{
+                display: grid;
+                grid-template-rows: 1fr 8fr;
+                grid-gap: 5px;
+                height: 100vh;
+                text-align: center;
+            }
+            #x1{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                grid-gap: 5px;
+            }
+            #x2{
+                display: grid;
+                grid-template-rows: 3fr 2fr 1fr;
+                grid-gap: 5px;
+            }
+            #x3{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 5px;
+            }
+         .y{
+            background-color: aqua; 
+         }
+         .y1{
+            background-color: rgb(127, 242, 148);
+         }
+        </style>
+    </head>
+    <body>
+        <div id="x">
+            <div class="y1">Navbar</div>
+            <div id="x1">
+                <div class="y">Sidebar</div>
+                <div id="x2">
+                    <div class="y">Main</div>
+                    <div id="x3">
+                        <div class="y1">content1</div>
+                        <div class="y1">content2</div>
+                        <div class="y1">content3</div>
+                    </div>
+                    <div class="y1">footer</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

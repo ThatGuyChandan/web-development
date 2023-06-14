@@ -1,0 +1,23 @@
+
+#x1{
+    background-color: rgb(90, 5, 107);
+    color: azure;
+    padding: 2% 25%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#x2{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 2% 5%;
+}
+#btn{
+    padding:5px 50px ;
+    background-color: green;
+    color: antiquewhite;
+    width: 45.5%;
+}
+#program,#state,#name,#email,#phone,#city{
+width: 45.5%;
+}

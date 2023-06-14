@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #bound{
+                margin-right: 700px;
+                border: 1px solid black;
+                background-color: rgb(195, 173, 190);
+            }
+            h1{font-size: 50px;}
+            #btn{margin-left: 110px;
+            background-color: palevioletred;
+        color: white;
+        border: 2px solid rgb(233, 27, 150);}
+            #fname{width:100px}
+        </style>
+    </head>
+    <body >
+            <div id="bound">
+                <h1> Birthday party</h1>
+                <hr>
+                <form action="/action_page.php">
+                    <p>Yes,I can make it</p>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">For sure</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">Not sure</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">Sorry,I can't</label><br><br>
+    
+                  <label for="fname">Number of people:</label><br>
+      <select name="fname" id="fname">
+        <option value="one">just me</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+      </select><br>
+      <label for="lname">your comments:</label><br>
+      <textarea rows="4" colum="50" style="border: 2px solid rgb(233, 27, 150);"></textarea><br>
+    <hr>
+      <input type="submit" value="Submit" id="btn">
+                </form>
+            </div>
+           
+        
+    </body>
+    
+    
+
+</html>

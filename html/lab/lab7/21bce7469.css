@@ -1,0 +1,12 @@
+#box{
+    border: 1px solid black;
+    margin: 10% 38.5%;
+    padding: 2% 2%;
+    background-color: palevioletred;
+    color: blue;
+  
+}
+#btn{
+    background-color: rgb(136, 20, 20);
+    color: aliceblue;
+}

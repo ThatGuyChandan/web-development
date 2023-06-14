@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            #navbar{
+                overflow: hidden;
+                background-color: green;
+                height: 60px;
+                padding: 5px;
+                font-size: 20px;
+            }
+            #box{
+                border: 2px solid #2980B9;
+                margin: 8% 15% ;
+                padding-left:10px ;
+            }
+            #list{
+                list-style: none;
+            }
+            .li{
+                border: 2px solid red;
+                margin: 2% 5%;
+                font-size: 30px;
+                height: 80px;
+            }
+            .btn{
+                margin-left: 50%;
+                margin-top: 20px;
+                font-size: 30px;
+                background-color: red;
+                color: aliceblue;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="navbar"><p>ITEM LISTER</p></div>
+        <div id="box">
+            <h1>ADD ITEMS</h1>
+            <input id="items" type="text" placeholder="" name="items">
+            <button onclick="addItem()">Submit</button>
+            <button onclick="reverseList()">Reverse</button>
+            <h2>ITEMS</h2>
+            <ul id="list"></ul>
+        </div>
+
+        <script>
+            const items = [];
+            function addItem(){
+                var item=document.getElementById("items").value;
+                var list=document.getElementById("list");
+                if(item.length==0){
+                alert("ENTER THE TEXT");
+                return false;
+                }
+                if(!isNaN(item)){
+                    alert("Numbers are not allowed");
+                    return false;
+                }
+               
+
+            }
+            
+        </script>
+    </body>
+</html>

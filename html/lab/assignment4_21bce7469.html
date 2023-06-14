@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            #cont{
+                display: grid;
+                grid-gap: 10px;
+                height: 100vh;
+                grid-template-rows: 2fr 4fr 2fr;
+            }
+            #x{
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 10px;
+                grid-template-columns:4fr 1fr 1fr ;
+            
+            }
+            .in{
+                background-color: rgb(206, 177, 10);
+                padding: 2%;
+            }
+         </style>
+    </head>
+    <body>
+        <div id="cont">
+            <div class="in">header</div>
+            <div id="x">
+                <div class="in">article</div>
+                <div class="in">nav</div>
+                <div class="in">ads</div>
+            </div>
+            
+            <div class="in">footer</div>
+
+        </div>
+    </body>
+</html>

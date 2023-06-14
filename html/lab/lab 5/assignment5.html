@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      margin: 0;
+          }
+    #navbar{
+      overflow: hidden;
+      background-color: green;
+      height: 60px;
+      padding: 10px;
+      font-size: 25px;
+            }
+    #box{
+      border: 2px solid #2980B9;
+      margin: 8% 15% ;
+      padding-left:10px ;
+            }   
+    #list{
+      list-style: none;
+    }         
+    li {
+      border: 1px solid red;
+      padding: 5px 5px;
+      margin-right:20px ;
+      margin-bottom: 5px;
+      font-size: 30px;
+      height: 60px;
+    }
+    button{
+      margin-left: 80%;
+      background-color: red ;
+      color: antiquewhite;
+      font-size: 40px;
+    }
+    #btn{
+      margin: 0;
+      background-color: rgba(255, 255, 255, 0.766) ;
+      color: black;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"><p><b>ITEM LISTER</b></p></div>
+  <div id="box">
+    <h1>ADD ITEMS</h1>
+    <input type="text" id="input">
+    <button onclick="addItem()" id="btn">Submit</button>
+    <button onclick="reverseList()" id="btn">Reverse</button>
+    <h2>ITEMS</h2>
+    <ul id="list"></ul>
+  </div>
+  
+
+  <script>
+    const items = []
+    function addItem() {
+      const input = document.getElementById("input");
+      const value = input.value;
+      //check if input is empty or not
+      if(value.length==0){
+        alert("ENTER THE TEXT");
+        return false;
+                }
+      //check entered value is integer or not
+        if(!isNaN(value)){
+        alert("Numbers are not allowed");
+        return false;
+            }
+      //check If the entered value is alreadypresent in the list or not
+      if (items.includes(value)) {
+        alert("Already exists, please enter again");
+        return;
+      }
+      items.push(value);
+      input.value = "";
+
+      const list = document.getElementById("list");
+      const listItem = document.createElement("li");
+      listItem.appendChild(document.createTextNode(value));
+
+      listItem.style.border = "3px solid red"; // add red border to list item
+      
+      // create a close button
+      const closeButton = document.createElement("button");
+      closeButton.appendChild(document.createTextNode("X"));
+      closeButton.onclick = function() {
+        if (confirm("ARE YOU SURE YOU WANT TO DELETE?")) {
+          const index = items.indexOf(value);
+          items.splice(index, 1);
+          listItem.remove();
+        }
+      };
+      
+      listItem.appendChild(closeButton);
+      list.appendChild(listItem);
+    }
+
+    function reverseList() {
+      items.reverse();
+
+      const list = document.getElementById("list");
+      list.innerHTML = "";
+      items.forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.appendChild(document.createTextNode(item));
+        listItem.style.border = "3px solid red"; // add red border to list item
+        
+        // create a close button
+        const closeButton = document.createElement("button");
+        closeButton.appendChild(document.createTextNode("X"));
+        closeButton.onclick = function() {
+          if (confirm("ARE YOU SURE YOU WANT TO DELETE?")) {
+            const index = items.indexOf(item);
+            items.splice(index, 1);
+            listItem.remove();
+          }
+        };
+        
+        listItem.appendChild(closeButton);
+        list.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>

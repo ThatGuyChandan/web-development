@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #x{
+        display: grid;
+        background-color: rgb(49, 14, 14);
+        grid-template-rows: 6fr 3fr;
+        height: 100vh;
+        grid-gap: 10px;
+        padding: 10px;
+       }
+       #x4{
+        display: grid;
+        grid-template-columns: 3fr 3fr 1fr 1fr;
+        grid-gap: 10px;
+       
+       }
+       #x1{
+        display: grid;
+        grid-template-rows:1fr 1fr;
+        grid-gap: 10px;
+       }
+       #x5{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 10px;
+       }
+       #x3{
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-gap: 10px;
+       }
+       #x2{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+       }
+       .y{
+        background-color: aliceblue;
+        color: rgb(49, 14, 14) ;
+        font-size: 80px;
+        text-align: center;
+        padding-top: 50px;
+      
+       }
+    </style>
+</head>
+<body>
+    <div id="x">
+        <div id="x4">
+            <div id="x1">
+                <div class="y">1</div>
+                <div id="x5">
+                    <div class="y">2</div>
+                    <div class="y">3</div>
+                </div>
+            </div>
+            <div class="y">4</div>
+            <div class="y">5</div>
+            <div id="x2">
+                <div class="y">6</div>
+                <div class="y">7</div>
+            </div>
+        </div>
+        <div id="x3">
+            <div class="y">8</div>
+            <div class="y">9</div>
+            <div class="y">10</div>
+            <div class="y">11</div>
+        </div>
+        
+    </div>
+</body>
+</html>
